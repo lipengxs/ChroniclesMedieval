@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles: Medieval - Epic Strategy Game | Official Website</title>
+    <meta name="description" content="Chronicles: Medieval launches Q1 2026! Experience epic medieval strategy battles, build your kingdom, and lead your armies to victory in this groundbreaking strategy game. Master the art of warfare in Chronicles: Medieval.">
+    <meta name="keywords" content="Chronicles: Medieval, Chronicles Medieval, medieval strategy game, strategy game 2026, medieval warfare, kingdom building, tactical combat, Chronicles Medieval release date, Chronicles Medieval Q1 2026">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chronicles-medieval.com/">
+    <meta property="og:title" content="Chronicles: Medieval - Epic Strategy Game">
+    <meta property="og:description" content="Chronicles: Medieval launches Q1 2026! Build your kingdom, lead armies, and master medieval warfare in this epic strategy game.">
+    <meta property="og:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chronicles: Medieval - Epic Strategy Game">
+    <meta name="twitter:description" content="Chronicles: Medieval launches Q1 2026! Build your kingdom and lead armies to victory in this epic medieval strategy game.">
+    <meta name="twitter:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="apple-touch-icon" href="static/images/chronicles/Chronicles_Logo_logo_texture.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="ee9f27884397bc6d" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://chronicles-medieval.com/">
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+
+    <style>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(45, 45, 45, 0.7)),
+                        url('static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-primary);
+            padding: 200px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.4), rgba(45, 45, 45, 0.3));
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 4;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 55, 0.5);
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            color: var(--text-secondary);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 3rem;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 4;
+            margin-top: 2rem;
+        }
+
+        .countdown-container h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        .countdown {
+            display: flex;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+
+        .countdown-item {
+            text-align: center;
+            min-width: 120px;
+            position: relative;
+        }
+
+        .countdown-item:not(:last-child)::after {
+            content: ':';
+            position: absolute;
+            right: -1.8rem;
+            top: 50%;
+            transform: translateY(-60%);
+            color: var(--accent-gold);
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1);
+        }
+
+        .countdown-item span {
+            font-size: 4rem;
+            font-weight: 900;
+            display: block;
+            color: var(--accent-gold);
+            text-shadow: 0 0 15px rgba(212, 175, 55, 1), 0 0 30px rgba(212, 175, 55, 0.5);
+            font-family: 'Courier New', monospace;
+            background: rgba(26, 26, 26, 0.6);
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .countdown-item label {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Game Introduction */
+        .introduction {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .video-container {
+            margin: 3rem auto;
+            max-width: 900px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .game-info {
+            margin-top: 3rem;
+            text-align: left;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-info h3, .game-info h4 {
+            color: var(--accent-gold);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .game-info h3 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .game-info h4 {
+            font-size: 1.4rem;
+        }
+
+        .game-info p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--secondary-bg);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Screenshots Gallery */
+        .screenshots {
+            background: var(--secondary-bg);
+            padding: 5rem 0;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+            border: 2px solid var(--border-color);
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform var(--transition-normal);
+        }
+
+        .screenshot-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: var(--text-primary);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color var(--transition-normal);
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-gold);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 5rem 0;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--secondary-bg);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background var(--transition-normal);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            background: rgba(26, 26, 26, 0.5);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+                padding: 150px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .countdown {
+                gap: 1.5rem;
+            }
+
+            .countdown-item {
+                min-width: 80px;
+            }
+
+            .countdown-item span {
+                font-size: 2.5rem;
+            }
+
+            .countdown-item:not(:last-child)::after {
+                right: -1rem;
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.9rem;
+            }
+
+            .countdown-container {
+                padding: 2rem;
+            }
+
+            .countdown-container h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .countdown {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 60px;
+            }
+
+            .countdown-item span {
+                font-size: 2rem;
+            }
+
+            .countdown-item label {
+                font-size: 0.8rem;
+            }
+
+            .countdown-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/media">Media</a></li>
+                    <li><a href="/guides">Guides</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/media">Media</a></li>
+                <li><a href="/guides">Guides</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Chronicles: Medieval</h1>
+                    <p class="subtitle">Build Your Kingdom, Lead Your Armies, Conquer the Realm</p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">Coming Q1 2026</p>
+                    <div class="countdown-container">
+                        <h2>Official Release Countdown - Q1 2026</h2>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <label>Days</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <label>Hours</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <label>Minutes</label>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <label>Seconds</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Introduction -->
+        <section class="introduction">
+            <div class="container">
+                <h2>Experience Chronicles: Medieval - The Ultimate Medieval Strategy Game</h2>
+                <p><strong>Chronicles: Medieval</strong> is set to launch in <strong>Q1 2026</strong>, revolutionizing the medieval strategy genre with its innovative gameplay mechanics, stunning visuals, and immersive kingdom-building experience. Join thousands of players worldwide in this epic medieval warfare experience where strategy meets action in the most authentic way possible. <strong>Chronicles: Medieval</strong> delivers an unparalleled gaming experience that combines tactical depth with grand strategy, making it the definitive medieval combat game for competitive players and casual gamers alike. The highly anticipated release of <strong>Chronicles: Medieval</strong> in Q1 2026 marks a new era in medieval strategy gaming.</p>
+                
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-D86NcserWk?si=wTReyM6GuCcOXmkz" title="Chronicles: Medieval Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="game-info">
+                    <h3>About Chronicles: Medieval</h3>
+                    <p><strong>Chronicles: Medieval</strong> is a groundbreaking medieval strategy game that combines strategic thinking with epic battles in an immersive multiplayer environment. Set in the turbulent Middle Ages, players take on the role of a powerful lord building their kingdom from humble beginnings to a mighty empire. The fate of entire regions now rests in the hands of skilled commanders who can master the art of medieval warfare and diplomacy. <strong>Chronicles: Medieval</strong> offers players the opportunity to experience authentic medieval combat, resource management, and kingdom expansion in a beautifully crafted world.</p>
+                    
+                    <h4>Story & Background</h4>
+                    <p>In <strong>Chronicles: Medieval</strong>, players take control of a medieval lord and engage in epic battles across diverse battlefields. The game features a rich narrative where different factions compete for control of valuable territories and strategic resources. Each battle in <strong>Chronicles: Medieval</strong> carries weight, as victories can shift the balance of power in this medieval universe. The world of <strong>Chronicles: Medieval</strong> is filled with political intrigue, military campaigns, and the constant struggle for dominance in a land torn by war and ambition.</p>
+                    
+                    <h4>Release Information</h4>
+                    <p><strong>Chronicles: Medieval</strong> is scheduled for official release in <strong>Q1 2026</strong> (specifically targeting March 31, 2026). The game will be available on PC (Steam), PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S platforms. <strong>Chronicles: Medieval</strong> will support cross-platform play from launch, allowing players to battle against opponents regardless of their chosen platform. The development team is working diligently to ensure <strong>Chronicles: Medieval</strong> delivers a polished and exciting experience when it launches in Q1 2026. Pre-orders for <strong>Chronicles: Medieval</strong> will be available closer to the Q1 2026 release date.</p>
+                    
+                    <h4>Supported Languages</h4>
+                    <p><strong>Chronicles: Medieval</strong> supports multiple languages including English, French, German, Spanish, Italian, Portuguese, Russian, Japanese, Chinese (Simplified & Traditional), and Korean, ensuring players worldwide can enjoy the full experience with proper localization. The comprehensive language support in <strong>Chronicles: Medieval</strong> makes it accessible to a global audience, fostering an international community of medieval strategy enthusiasts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section class="features">
+            <div class="container">
+                <h2>How to Play Chronicles: Medieval</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Build Your Kingdom</h3>
+                        <p>Start from a small settlement and expand your realm in <strong>Chronicles: Medieval</strong>. Construct castles, fortifications, and economic buildings to strengthen your kingdom. Manage resources wisely, recruit armies, and establish trade routes to ensure your kingdom thrives. Each decision in <strong>Chronicles: Medieval</strong> impacts your path to victory.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Strategic Combat</h3>
+                        <p>Engage in tactical battles that require both strategic planning and battlefield execution in <strong>Chronicles: Medieval</strong>. Master the art of medieval warfare, utilize terrain effectively, and coordinate with your armies to achieve victory in intense multiplayer matches. Success in <strong>Chronicles: Medieval</strong> demands both individual skill and tactical thinking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Diverse Battlefields</h3>
+                        <p>Fight across multiple dynamic environments including medieval cities, open fields, mountain passes, and coastal regions in <strong>Chronicles: Medieval</strong>. Each battlefield offers unique tactical opportunities and challenges that will test your adaptability and strategic prowess. The varied environments in <strong>Chronicles: Medieval</strong> ensure no two battles are ever the same.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Progressive Customization</h3>
+                        <p>Unlock new units, technologies, and abilities as you progress in <strong>Chronicles: Medieval</strong>. Build your reputation as an elite commander and gain access to exclusive units and advanced military systems that give you the edge in battle. The progression system in <strong>Chronicles: Medieval</strong> rewards both skill and dedication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Screenshots -->
+        <section class="screenshots">
+            <div class="container">
+                <h2>Chronicles: Medieval Game Gallery</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Explore stunning visuals from <strong>Chronicles: Medieval</strong>, showcasing the epic medieval battles, diverse battlefields, and intense action that await you when the game launches in Q1 2026. These screenshots capture the essence of what makes <strong>Chronicles: Medieval</strong> a revolutionary medieval strategy experience.</p>
+                <div class="screenshot-grid">
+                    <div class="screenshot-item" data-src="static/images/chronicles/Battle.png">
+                        <img src="static/images/chronicles/Battle.png" alt="Chronicles: Medieval epic medieval battle scene with armies clashing, launching Q1 2026">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/chronicles/Battlefield_Landscape.png">
+                        <img src="static/images/chronicles/Battlefield_Landscape.png" alt="Chronicles: Medieval battlefield landscape showing strategic terrain, Q1 2026 release">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/chronicles/ChargeAttack.png">
+                        <img src="static/images/chronicles/ChargeAttack.png" alt="Chronicles: Medieval cavalry charge attack showcasing tactical combat">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/chronicles/MedievalCity.png">
+                        <img src="static/images/chronicles/MedievalCity.png" alt="Chronicles: Medieval medieval city with castles and fortifications">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/chronicles/Strategy.png">
+                        <img src="static/images/chronicles/Strategy.png" alt="Chronicles: Medieval strategic gameplay with unit positioning and tactics">
+                    </div>
+                    <div class="screenshot-item" data-src="static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+                        <img src="static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg" alt="Chronicles: Medieval key art showcasing the game's stunning graphics, Q1 2026">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions About Chronicles: Medieval</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">What is Chronicles: Medieval and when will it be released?</div>
+                        <div class="faq-answer"><strong>Chronicles: Medieval</strong> is an epic medieval strategy game that combines strategic gameplay with intense action in a multiplayer environment. The game is scheduled for official release in <strong>Q1 2026</strong> (targeting March 31, 2026) and will be available on PC, PlayStation, and Xbox platforms. Players will experience the ultimate medieval combat with authentic warfare mechanics, kingdom building, and strategic battles. The Q1 2026 release of <strong>Chronicles: Medieval</strong> marks an exciting milestone for medieval gaming enthusiasts.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What platforms will Chronicles: Medieval be available on at launch in Q1 2026?</div>
+                        <div class="faq-answer">When <strong>Chronicles: Medieval</strong> launches in <strong>Q1 2026</strong>, it will be available on PC (Steam), PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S. The game will support cross-platform play from day one, allowing players to battle against opponents regardless of their chosen platform. This ensures that the <strong>Chronicles: Medieval</strong> community remains united across all gaming systems when the Q1 2026 release arrives.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How does the kingdom building system work in Chronicles: Medieval?</div>
+                        <div class="faq-answer"><strong>Chronicles: Medieval</strong> features an extensive kingdom building system where players can construct various buildings, manage resources, and expand their territories. As you progress and gain experience, you'll unlock new structures and technologies to create the perfect kingdom for your playstyle. The building system in <strong>Chronicles: Medieval</strong> allows for thousands of unique combinations and strategic approaches.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is Chronicles: Medieval a multiplayer-only game?</div>
+                        <div class="faq-answer">While <strong>Chronicles: Medieval</strong> excels in multiplayer battles, it also includes single-player campaign modes and training missions. Players can practice their skills against AI opponents before jumping into competitive multiplayer matches. The single-player content in <strong>Chronicles: Medieval</strong> provides an excellent way to learn the game mechanics and story.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What makes Chronicles: Medieval different from other medieval strategy games?</div>
+                        <div class="faq-answer"><strong>Chronicles: Medieval</strong> combines strategic depth with authentic medieval warfare, featuring unique units with distinct abilities, dynamic battlefields, and a progression system that rewards both skill and tactical thinking. The game's focus on both kingdom management and battlefield tactics sets it apart from traditional medieval games, offering a more immersive and competitive experience.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Are there different game modes in Chronicles: Medieval?</div>
+                        <div class="faq-answer">Yes, <strong>Chronicles: Medieval</strong> offers multiple game modes including Campaign Mode, Skirmish Battles, Multiplayer Matches, and special event modes. Each mode requires different strategies and approaches, providing varied gameplay experiences for all types of players. The diverse game modes in <strong>Chronicles: Medieval</strong> ensure there's something for every type of gamer.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How often does Chronicles: Medieval receive updates?</div>
+                        <div class="faq-answer"><strong>Chronicles: Medieval</strong> receives regular updates including new units, technologies, maps, and gameplay improvements. The development team is committed to keeping the game fresh and balanced, with major content updates released quarterly and smaller patches as needed to maintain optimal gameplay experience.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I play Chronicles: Medieval with friends?</div>
+                        <div class="faq-answer">Absolutely! <strong>Chronicles: Medieval</strong> features robust friend systems and party mechanics that allow you to team up with friends for both casual and competitive matches. You can create private lobbies, join public matches together, and participate in clan-based activities. The social features in <strong>Chronicles: Medieval</strong> make it easy to connect and play with your gaming community.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <div class="logo">
+                    <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                </div>
+                    <p>Experience the ultimate medieval strategy combat in Chronicles: Medieval. Build your kingdom and lead armies to victory in this revolutionary multiplayer game.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/media">Media</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chronicles: Medieval. All rights reserved. | Build your kingdom and experience the ultimate medieval strategy combat in Chronicles: Medieval.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/base.js"></script>
+    <script>
+        // Countdown Timer - Q1 2026 (March 31, 2026)
+        const countDownDate = new Date("March 31, 2026 00:00:00").getTime();
+
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CHRONICLES: MEDIEVAL LAUNCHED!</div>";
+            }
+        }, 1000);
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const screenshotItems = document.querySelectorAll('.screenshot-item');
+
+        screenshotItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.getAttribute('data-src');
+                lightboxImg.src = imgSrc;
+                lightboxImg.alt = item.querySelector('img').alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .faq-item, .screenshot-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

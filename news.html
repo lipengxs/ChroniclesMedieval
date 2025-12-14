@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles: Medieval News - Latest Updates & Announcements</title>
+    <meta name="description" content="Stay updated with the latest Chronicles: Medieval news, announcements, events, and updates. Get the newest information about medieval strategy battles, game updates, and community events in Chronicles: Medieval.">
+    <meta name="keywords" content="Chronicles: Medieval news, Chronicles Medieval updates, Chronicles Medieval announcements, Chronicles Medieval events, medieval strategy game news, Chronicles Medieval latest info">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chronicles-medieval.com/news">
+    <meta property="og:title" content="Chronicles: Medieval News - Latest Updates & Announcements">
+    <meta property="og:description" content="Stay updated with the latest Chronicles: Medieval news, announcements, events, and updates.">
+    <meta property="og:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chronicles: Medieval News - Latest Updates & Announcements">
+    <meta name="twitter:description" content="Stay updated with the latest Chronicles: Medieval news, announcements, events, and updates.">
+    <meta name="twitter:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="apple-touch-icon" href="static/images/chronicles/Chronicles_Logo_logo_texture.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="ee9f27884397bc6d" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://chronicles-medieval.com/news">
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .news-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('static/images/chronicles/Battlefield_Landscape.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .news-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .news-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .news-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .news-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .news-tab {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-tab.active,
+        .news-tab:hover {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+        }
+
+        .news-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .news-item {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .news-item-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .news-category {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .news-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .news-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color var(--transition-normal);
+        }
+
+        .news-title a:hover {
+            color: var(--accent-gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .news-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .news-item-content {
+            padding: 1rem 2rem 2rem;
+        }
+
+        .news-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            filter: brightness(1.05) saturate(1.1) contrast(1.05);
+            transition: transform var(--transition-normal);
+        }
+
+        .news-image:hover {
+            transform: scale(1.02);
+        }
+
+        .read-more-btn {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all var(--transition-normal);
+            display: inline-block;
+            box-shadow: var(--shadow-gold);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+        }
+
+        .featured-news {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(45, 45, 45, 0.4)),
+                        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1), transparent);
+            padding: 4rem 0;
+        }
+
+        .featured-item {
+            background: var(--secondary-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 2rem;
+        }
+
+        .featured-category {
+            background: var(--gradient-gold);
+            color: var(--primary-bg);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .featured-title {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .featured-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .news-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .news-hero p {
+                font-size: 1.1rem;
+            }
+
+            .news-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .news-tab {
+                width: 200px;
+                text-align: center;
+            }
+
+            .news-item-header,
+            .news-item-content {
+                padding: 1.5rem;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/news" class="active">News</a></li>
+                    <li><a href="/media">Media</a></li>
+                    <li><a href="/guides">Guides</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/media">Media</a></li>
+                <li><a href="/guides">Guides</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- News Hero -->
+        <section class="news-hero">
+            <div class="container">
+                <h1>LATEST NEWS</h1>
+                <p>Stay updated with the latest Chronicles: Medieval news, announcements, events, and game updates. Get exclusive insights into the world of medieval strategy and kingdom building.</p>
+            </div>
+        </section>
+
+        <!-- Featured News -->
+        <section class="featured-news">
+            <div class="container">
+                <h2 class="text-center mb-4">Featured News</h2>
+                <div class="featured-item">
+                    <img src="static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg" alt="Chronicles: Medieval Official Announcement" class="featured-image">
+                    <div class="featured-content">
+                        <span class="featured-category">Latest</span>
+                        <h3 class="featured-title">Chronicles: Medieval Official Release Announcement - Q1 2026</h3>
+                        <p class="featured-excerpt">We're thrilled to officially announce that Chronicles: Medieval will launch in Q1 2026! After years of development, players will finally be able to experience epic medieval strategy battles, build their kingdoms, and lead armies to victory. Chronicles: Medieval brings authentic medieval warfare to life with stunning graphics, deep strategic gameplay, and immersive kingdom building mechanics.</p>
+                        <a href="https://chronicles-medieval.com/news/official-announcement" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Content -->
+        <section class="news-content">
+            <div class="container">
+                <!-- News Tabs -->
+                <div class="news-tabs">
+                    <button class="news-tab active" data-category="latest">Latest</button>
+                    <button class="news-tab" data-category="announcement">Announcement</button>
+                    <button class="news-tab" data-category="update">Update</button>
+                    <button class="news-tab" data-category="event">Event</button>
+                </div>
+
+                <!-- News List -->
+                <div class="news-list">
+                    <!-- Latest News Items -->
+                    <div class="news-item" data-category="latest">
+                        <div class="news-item-header">
+                            <span class="news-category">Latest</span>
+                            <a href="https://chronicles-medieval.com/news/official-announcement" target="_blank" rel="noopener"><h3 class="news-title">Chronicles: Medieval Official Release Announcement - Q1 2026</h3></a>
+                            <p class="news-date">2025-12-15</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/68baaa7cecb85b1ea8097ddd_AnnouncementTrailerDeepDive_headerimage.jpg" alt="Chronicles: Medieval Official Announcement Trailer Deep Dive" class="news-image">
+                            <p class="news-excerpt">We're thrilled to officially announce that Chronicles: Medieval will launch in Q1 2026! After years of development, players will finally be able to experience epic medieval strategy battles, build their kingdoms, and lead armies to victory in Chronicles: Medieval.</p>
+                            <a href="https://chronicles-medieval.com/news/official-announcement" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">Announcement</span>
+                            <a href="https://chronicles-medieval.com/news/pre-order-available" target="_blank" rel="noopener"><h3 class="news-title">Pre-Orders Now Available for Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-12-10</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Battle.png" alt="Chronicles: Medieval Pre-Orders" class="news-image">
+                            <p class="news-excerpt">Pre-orders for Chronicles: Medieval are now live! Secure your copy of the game and receive exclusive bonuses including special unit skins, early access to beta testing, and unique kingdom customization options. Chronicles: Medieval pre-orders come with exciting rewards for early supporters.</p>
+                            <a href="https://chronicles-medieval.com/news/pre-order-available" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">Update</span>
+                            <a href="https://chronicles-medieval.com/news/combat-system-reveal" target="_blank" rel="noopener"><h3 class="news-title">Combat System Deep Dive - Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-12-05</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/68b95c6cb0e0c4f62831ffc9_Alessia_blog_left.jpg" alt="Chronicles: Medieval Combat System and Character Art" class="news-image">
+                            <p class="news-excerpt">Get an in-depth look at the combat system in Chronicles: Medieval. Learn about unit formations, tactical positioning, terrain advantages, and how to master medieval warfare. The combat system in Chronicles: Medieval offers authentic strategic depth.</p>
+                            <a href="https://chronicles-medieval.com/news/combat-system-reveal" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="latest">
+                        <div class="news-item-header">
+                            <span class="news-category">Latest</span>
+                            <a href="https://chronicles-medieval.com/news/kingdom-building-guide" target="_blank" rel="noopener"><h3 class="news-title">Kingdom Building Guide - Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-11-28</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/MedievalCity.png" alt="Chronicles: Medieval Kingdom Building" class="news-image">
+                            <p class="news-excerpt">Master the art of kingdom building in Chronicles: Medieval. This comprehensive guide covers resource management, building placement, economic strategies, and how to create a thriving medieval kingdom. Chronicles: Medieval offers deep kingdom management mechanics.</p>
+                            <a href="https://chronicles-medieval.com/news/kingdom-building-guide" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">Event</span>
+                            <a href="https://chronicles-medieval.com/news/community-tournament" target="_blank" rel="noopener"><h3 class="news-title">Chronicles: Medieval Community Tournament Registration Open</h3></a>
+                            <p class="news-date">2025-11-20</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Strategy.png" alt="Chronicles: Medieval Tournament" class="news-image">
+                            <p class="news-excerpt">Registration is now open for the first official Chronicles: Medieval Community Tournament! Compete with other commanders for exclusive rewards and recognition in the Chronicles: Medieval competitive scene. Show your strategic prowess in Chronicles: Medieval.</p>
+                            <a href="https://chronicles-medieval.com/news/community-tournament" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">Update</span>
+                            <a href="https://chronicles-medieval.com/news/unit-roster-reveal" target="_blank" rel="noopener"><h3 class="news-title">Unit Roster Revealed - Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-11-15</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Battlefield_Landscape.png" alt="Chronicles: Medieval Units" class="news-image">
+                            <p class="news-excerpt">Discover the diverse unit roster available in Chronicles: Medieval. From infantry and cavalry to siege weapons and archers, each unit in Chronicles: Medieval has unique strengths and tactical roles. Learn how to build the perfect army in Chronicles: Medieval.</p>
+                            <a href="https://chronicles-medieval.com/news/unit-roster-reveal" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">Announcement</span>
+                            <a href="https://chronicles-medieval.com/news/beta-test-signup" target="_blank" rel="noopener"><h3 class="news-title">Beta Test Sign-Up Now Available - Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-11-10</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Chronicles_YoungRecruit_Wallpaper Horizontal 3849x2160 - Game L.jpg" alt="Chronicles: Medieval Beta Test" class="news-image">
+                            <p class="news-excerpt">Sign up now for the Chronicles: Medieval closed beta test! Get early access to the game and help shape the future of Chronicles: Medieval. Beta testers will have the opportunity to provide feedback and experience Chronicles: Medieval before the official launch.</p>
+                            <a href="https://chronicles-medieval.com/news/beta-test-signup" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="update">
+                        <div class="news-item-header">
+                            <span class="news-category">Update</span>
+                            <a href="https://chronicles-medieval.com/news/map-showcase" target="_blank" rel="noopener"><h3 class="news-title">Battlefield Maps Showcase - Chronicles: Medieval</h3></a>
+                            <p class="news-date">2025-11-05</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Battlefield_Landscape.png" alt="Chronicles: Medieval Maps" class="news-image">
+                            <p class="news-excerpt">Explore the diverse battlefields of Chronicles: Medieval. From medieval cities to open fields, each map in Chronicles: Medieval offers unique strategic opportunities. Learn about terrain advantages and tactical positioning in Chronicles: Medieval.</p>
+                            <a href="https://chronicles-medieval.com/news/map-showcase" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="event">
+                        <div class="news-item-header">
+                            <span class="news-category">Event</span>
+                            <a href="https://chronicles-medieval.com/news/developer-stream" target="_blank" rel="noopener"><h3 class="news-title">Developer Stream - Chronicles: Medieval Gameplay Reveal</h3></a>
+                            <p class="news-date">2025-10-30</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Chronicles_FinallyTheKing_Wallpaper Horizontal 3849x2160 - Game L.jpg" alt="Chronicles: Medieval Developer Stream" class="news-image">
+                            <p class="news-excerpt">Join the developers for a live gameplay stream of Chronicles: Medieval! Watch exclusive gameplay footage, learn about game mechanics, and ask questions about Chronicles: Medieval. This is your chance to see Chronicles: Medieval in action.</p>
+                            <a href="https://chronicles-medieval.com/news/developer-stream" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+
+                    <div class="news-item" data-category="announcement">
+                        <div class="news-item-header">
+                            <span class="news-category">Announcement</span>
+                            <a href="https://chronicles-medieval.com/news/platform-announcement" target="_blank" rel="noopener"><h3 class="news-title">Chronicles: Medieval Platform Announcement</h3></a>
+                            <p class="news-date">2025-10-25</p>
+                        </div>
+                        <div class="news-item-content">
+                            <img src="static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg" alt="Chronicles: Medieval Platforms" class="news-image">
+                            <p class="news-excerpt">Chronicles: Medieval will be available on PC (Steam), PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S. Chronicles: Medieval will support cross-platform play, allowing players to battle regardless of platform. Experience Chronicles: Medieval on your preferred platform.</p>
+                            <a href="https://chronicles-medieval.com/news/platform-announcement" class="read-more-btn" target="_blank" rel="noopener">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                <div class="logo">
+                    <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                </div>
+                    <p>Stay updated with the latest Chronicles: Medieval news and announcements. Experience the ultimate medieval strategy combat in Chronicles: Medieval.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/media">Media</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chronicles: Medieval. All rights reserved. | Stay updated with Chronicles: Medieval news and experience epic medieval battles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/base.js"></script>
+    <script>
+        // News Tab Filtering
+        let activeCategory = 'latest';
+        
+        document.querySelectorAll('.news-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.news-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                activeCategory = tab.dataset.category;
+                
+                const newsItems = document.querySelectorAll('.news-item');
+                newsItems.forEach(item => {
+                    if (activeCategory === 'latest' || item.dataset.category === activeCategory) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.news-item, .featured-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

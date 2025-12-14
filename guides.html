@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles: Medieval Guides - Strategy Tips & Gameplay Guide</title>
+    <meta name="description" content="Master Chronicles: Medieval with our comprehensive guides covering kingdom building, combat strategies, unit management, and advanced tactics. Learn how to dominate the battlefield in Chronicles: Medieval.">
+    <meta name="keywords" content="Chronicles: Medieval guides, Chronicles Medieval strategy, Chronicles Medieval tips, medieval strategy guide, kingdom building guide, Chronicles Medieval tactics">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chronicles-medieval.com/guides">
+    <meta property="og:title" content="Chronicles: Medieval Guides - Strategy Tips & Gameplay Guide">
+    <meta property="og:description" content="Master Chronicles: Medieval with our comprehensive guides covering kingdom building, combat strategies, and advanced tactics.">
+    <meta property="og:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chronicles: Medieval Guides - Strategy Tips & Gameplay Guide">
+    <meta name="twitter:description" content="Master Chronicles: Medieval with our comprehensive guides covering kingdom building, combat strategies, and advanced tactics.">
+    <meta name="twitter:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="apple-touch-icon" href="static/images/chronicles/Chronicles_Logo_logo_texture.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/base.css?v=1.0.0">
+    
+    <!-- Microsoft Validation -->
+    <meta name="msvalidate.01" content="B362957FC36C5EDDD6079B6D78330424">
+    
+    <!-- IndexNow -->
+    <meta name="yandex-verification" content="ee9f27884397bc6d" />
+    <meta name="IndexNow-Key" content="B362957FC36C5EDDD6079B6D78330424">
+    <meta name="IndexNow-Url" content="https://chronicles-medieval.com/guides">
+    
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CDFZLSQVMZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CDFZLSQVMZ');
+    </script>
+    
+    <style>
+        .guides-hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(45, 45, 45, 0.90)), 
+                        url('static/images/chronicles/Strategy.png');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-primary);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .guides-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .guides-hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guides-content {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 0.3)),
+                        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1), transparent);
+        }
+
+        .guide-section {
+            margin-bottom: 4rem;
+        }
+
+        .guide-section h2 {
+            color: var(--accent-gold);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: 1rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .guide-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .guide-card h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .guide-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .guide-card ul li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .guide-card ul li::before {
+            content: '⚔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .guide-accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--secondary-bg);
+        }
+
+        .accordion-header {
+            padding: 1.5rem;
+            background: var(--gradient-primary);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background var(--transition-normal);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+        }
+
+        .accordion-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            transition: transform var(--transition-normal);
+        }
+
+        .accordion-item.active .accordion-header::after {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-slow), padding var(--transition-slow);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 2000px;
+            padding: 1.5rem;
+        }
+
+        .accordion-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .accordion-content ul li {
+            color: var(--text-secondary);
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .accordion-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .guides-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .guides-hero p {
+                font-size: 1.1rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/media">Media</a></li>
+                    <li><a href="/guides" class="active">Guides</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-menu">
+            <button class="close-menu">&times;</button>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/media">Media</a></li>
+                <li><a href="/guides">Guides</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Guides Hero -->
+        <section class="guides-hero">
+            <div class="container">
+                <h1>GAME GUIDES</h1>
+                <p>Master Chronicles: Medieval with our comprehensive guides covering kingdom building, combat strategies, unit management, and advanced tactics. Learn how to dominate the battlefield and build a thriving medieval kingdom.</p>
+            </div>
+        </section>
+
+        <!-- Guides Content -->
+        <section class="guides-content">
+            <div class="container">
+                <!-- Getting Started -->
+                <div class="guide-section">
+                    <h2>Getting Started</h2>
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3>Basic Controls</h3>
+                            <p>Learn the fundamental controls and interface of Chronicles: Medieval. Master camera movement, unit selection, and basic commands to get started on your medieval conquest.</p>
+                            <ul>
+                                <li>Camera controls and movement</li>
+                                <li>Unit selection and grouping</li>
+                                <li>Basic commands and shortcuts</li>
+                                <li>Interface navigation</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <h3>First Steps</h3>
+                            <p>Your journey in Chronicles: Medieval begins with establishing your first settlement. Learn how to gather resources, construct buildings, and recruit your initial army.</p>
+                            <ul>
+                                <li>Starting settlement setup</li>
+                                <li>Resource gathering basics</li>
+                                <li>First building construction</li>
+                                <li>Initial unit recruitment</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Game Modes</h3>
+                            <p>Explore the different game modes available in Chronicles: Medieval. From single-player campaigns to multiplayer battles, understand what each mode offers.</p>
+                            <ul>
+                                <li>Campaign mode overview</li>
+                                <li>Skirmish battles</li>
+                                <li>Multiplayer matches</li>
+                                <li>Special event modes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kingdom Building -->
+                <div class="guide-section">
+                    <h2>Kingdom Building</h2>
+                    <div class="guide-accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Resource Management</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Effective resource management is crucial for success in Chronicles: Medieval. Learn how to balance your economy and ensure a steady supply of materials for your kingdom.</p>
+                                <ul>
+                                    <li>Understanding resource types: Gold, Wood, Stone, Food</li>
+                                    <li>Optimizing resource gathering rates</li>
+                                    <li>Trade routes and economic buildings</li>
+                                    <li>Resource storage and capacity management</li>
+                                    <li>Emergency resource strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Building Placement</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Strategic building placement can make the difference between victory and defeat. Master the art of positioning structures for maximum efficiency and defense.</p>
+                                <ul>
+                                    <li>Optimal building layouts</li>
+                                    <li>Defensive structure placement</li>
+                                    <li>Economic building optimization</li>
+                                    <li>Terrain considerations</li>
+                                    <li>Expansion planning strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Technology Research</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Research technologies to unlock new units, buildings, and abilities. Plan your research path carefully to gain advantages over your opponents.</p>
+                                <ul>
+                                    <li>Technology tree overview</li>
+                                    <li>Priority research paths</li>
+                                    <li>Military vs economic research</li>
+                                    <li>Technology timing strategies</li>
+                                    <li>Counter-research planning</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combat Strategies -->
+                <div class="guide-section">
+                    <h2>Combat Strategies</h2>
+                    <div class="guide-accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Unit Formations</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Master unit formations to maximize your army's effectiveness on the battlefield. Proper formation can turn the tide of battle in your favor.</p>
+                                <ul>
+                                    <li>Infantry formations: Shield walls and phalanxes</li>
+                                    <li>Cavalry formations: Charges and flanking maneuvers</li>
+                                    <li>Archer positioning: High ground and cover</li>
+                                    <li>Mixed unit coordination</li>
+                                    <li>Formation transitions during battle</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Tactical Positioning</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Terrain and positioning are key factors in Chronicles: Medieval battles. Learn how to use the battlefield to your advantage.</p>
+                                <ul>
+                                    <li>High ground advantages</li>
+                                    <li>Chokepoint utilization</li>
+                                    <li>Flanking opportunities</li>
+                                    <li>Retreat and regrouping</li>
+                                    <li>Ambush tactics</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <span>Unit Counters</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Understanding unit strengths and weaknesses is essential for victory. Learn which units counter others and how to build balanced armies.</p>
+                                <ul>
+                                    <li>Infantry vs Cavalry matchups</li>
+                                    <li>Archer effectiveness against different units</li>
+                                    <li>Siege weapon usage</li>
+                                    <li>Elite unit strategies</li>
+                                    <li>Counter-building strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Tactics -->
+                <div class="guide-section">
+                    <h2>Advanced Tactics</h2>
+                    <div class="guide-grid">
+                        <div class="guide-card">
+                            <h3>Early Game Rush</h3>
+                            <p>Aggressive early game strategies can catch opponents off guard. Learn how to execute effective rushes while maintaining economic stability.</p>
+                            <ul>
+                                <li>Fast military production</li>
+                                <li>Early aggression timing</li>
+                                <li>Economic balance during rush</li>
+                                <li>Defending against rushes</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Economic Boom</h3>
+                            <p>Focus on economy to outpace opponents in the late game. Build a strong foundation for massive armies and advanced technologies.</p>
+                            <ul>
+                                <li>Rapid expansion strategies</li>
+                                <li>Economic building priorities</li>
+                                <li>Resource stockpiling</li>
+                                <li>Transitioning to military</li>
+                            </ul>
+                        </div>
+                        <div class="guide-card">
+                            <h3>Defensive Play</h3>
+                            <p>Master defensive strategies to withstand enemy attacks and counter-attack effectively. Fortifications and positioning are key.</p>
+                            <ul>
+                                <li>Defensive structure placement</li>
+                                <li>Wall and gate strategies</li>
+                                <li>Defensive unit compositions</li>
+                                <li>Counter-attack timing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="static/images/chronicles/Chronicles_Logo_logo_texture.png" alt="Chronicles: Medieval Logo">
+                    </div>
+                    <p>Master Chronicles: Medieval with our comprehensive guides. Build your kingdom and lead armies to victory.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/media">Media</a></li>
+                        <li><a href="/guides">Guides</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Chronicles: Medieval. All rights reserved. | Master Chronicles: Medieval and experience epic medieval strategy combat.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/base.js"></script>
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all accordion items
+                document.querySelectorAll('.accordion-item').forEach(accordionItem => {
+                    accordionItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.98)';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+            }
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.guide-card, .accordion-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
