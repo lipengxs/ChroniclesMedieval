@@ -104,4 +104,16 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://chronicles-medieval.com/console-status-guide</loc>
+        <lastmod>2026-07-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://chronicles-medieval.com/modding-support-guide</loc>
+        <lastmod>2026-07-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+    </url>
 </urlset>
