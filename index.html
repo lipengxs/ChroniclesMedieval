@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chronicles: Medieval - Epic Strategy Game | Unofficial Fan Website</title>
-    <meta name="description" content="Chronicles: Medieval is planned for 2026. Follow the latest gameplay reveal, Dev Diary battle systems, formations, morale, kingdom politics, and medieval sandbox news. (Unofficial Fan Website)">
+    <title>Chronicles: Medieval | Release Date, News &amp; Battle System Guide</title>
+    <meta name="description" content="Independent, source-linked Chronicles: Medieval guide for current release-status checks, developer news, battle-system research and platform questions.">
     <meta name="keywords" content="Chronicles: Medieval, Chronicles Medieval, medieval strategy game, strategy game 2026, medieval warfare, campaign sandbox, tactical combat, Chronicles Medieval release date, Chronicles Medieval gameplay reveal, Chronicles Medieval battle guide">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chronicles-medieval.com/">
-    <meta property="og:title" content="Chronicles: Medieval - Epic Strategy Game">
-    <meta property="og:description" content="Chronicles: Medieval is planned for 2026. Follow gameplay reveal news, battle systems, kingdom politics, and medieval sandbox updates.">
+    <meta property="og:title" content="Chronicles: Medieval | Release Date, News &amp; Battle System Guide">
+    <meta property="og:description" content="Independent, source-linked release, news and battle-system research for Chronicles: Medieval.">
     <meta property="og:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chronicles: Medieval - Epic Strategy Game">
-    <meta name="twitter:description" content="Chronicles: Medieval is planned for 2026. Follow gameplay reveal news, battle systems, kingdom politics, and medieval sandbox updates.">
+    <meta name="twitter:title" content="Chronicles: Medieval | Release Date, News &amp; Battle System Guide">
+    <meta name="twitter:description" content="Independent, source-linked release, news and battle-system research for Chronicles: Medieval.">
     <meta name="twitter:image" content="https://chronicles-medieval.com/static/images/chronicles/Chronicles_KeyArt_Wallpaper Horizontal 3849x2160 - Logo.jpg">
     
     <!-- Canonical URL -->
@@ -565,28 +565,7 @@
                 <div class="hero-content">
                     <h1>Chronicles: Medieval Updates &amp; Campaign Planning</h1>
                     <p class="subtitle">Follow confirmed developer coverage, then turn battle systems and political context into a practical planning checklist.</p>
-                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-secondary);">Planned for 2026 - Gameplay Reveal Now Live</p>
-                    <div class="countdown-container">
-                        <h2>2026 Development Watch</h2>
-                        <div class="countdown">
-                            <div class="countdown-item">
-                                <span id="days">00</span>
-                                <label>Days</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="hours">00</span>
-                                <label>Hours</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="minutes">00</span>
-                                <label>Minutes</label>
-                            </div>
-                            <div class="countdown-item">
-                                <span id="seconds">00</span>
-                                <label>Seconds</label>
-                            </div>
-                        </div>
-                    </div>
+                    <p style="font-size: 1.1rem; margin:0 auto; max-width:780px; color: var(--text-secondary);">Check the <a href="https://store.steampowered.com/app/2231020/Chronicles_Medieval/" target="_blank" rel="noopener noreferrer">official Steam listing</a> before relying on a release date, platform, feature, or purchase claim. This site is an independent research guide.</p>
                 </div>
             </div>
         </section>
@@ -745,10 +724,10 @@
                 <div class="footer-links">
                     <h3>Community</h3>
                     <ul>
-                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener">Discord</a></li>
-                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener">YouTube</a></li>
-                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener">Twitch</a></li>
+                        <li><a href="https://discord.gg/chroniclesmedieval" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                        <li><a href="https://twitter.com/chroniclesmedieval" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                        <li><a href="https://www.youtube.com/chroniclesmedieval" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/chroniclesmedieval" target="_blank" rel="noopener noreferrer">Twitch</a></li>
                     </ul>
                 </div>
             </div>
@@ -761,29 +740,6 @@
 
     <script src="static/base.js"></script>
     <script>
-        // Countdown Timer - provisional 2026 milestone until an exact date is confirmed
-        const countDownDate = new Date("December 31, 2026 00:00:00").getTime();
-
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.querySelector(".countdown").innerHTML = "<div style='font-size: 2rem; color: var(--accent-gold); font-weight: bold;'>CHRONICLES: MEDIEVAL LAUNCHED!</div>";
-            }
-        }, 1000);
-
         // FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
