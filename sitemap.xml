@@ -3,31 +3,31 @@
     <!-- Main Navigation URLs -->
     <url>
         <loc>https://chronicles-medieval.com/</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/news</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/media</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/guides</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/beginner-guide</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -63,31 +63,31 @@
     </url>
     <url>
         <loc>https://chronicles-medieval.com/release-date</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/system-requirements</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/similar-games</loc>
-        <lastmod>2026-06-29</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/privacy-policy</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chronicles-medieval.com/terms-of-service</loc>
-        <lastmod>2026-06-30</lastmod>
+        <lastmod>2026-10-07</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
