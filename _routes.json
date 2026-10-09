@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "include": [
+    "/static/images/chronicles/*",
+    "/static/logo.png",
+    "/static/favicon.ico",
+    "/favicon.ico",
+    "/ads.txt"
+  ],
+  "exclude": []
+}

@@ -18,4 +18,6 @@ The Cloudflare Pages project `chroniclesmedieval` is connected to this repositor
 
 `_headers` prevents caching of the retirement worker and removed asset routes. `sw.js` only retires the previous advertising worker; it must not import third-party scripts. Advertising integrations have been removed.
 
+`_worker.js` returns HTTP 410 for withdrawn image URLs before any static-asset lookup. `_routes.json` limits execution to withdrawn resources; regular pages and new images remain static. The 404 page covers other missing files. Purge existing CDN caches when deploying removals.
+
 Deployment history may retain old public copies. Updating production does not remove historical deployment URLs; audit those separately. Internal case records and private backups are not part of this repository.
