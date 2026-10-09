@@ -45,17 +45,17 @@ function initMobileMenu() {
 // FAQ Accordion Toggle
 function initFAQAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
-    
+
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const item = question.parentElement;
             const isActive = item.classList.contains('active');
-            
+
             // Close all FAQ items
             document.querySelectorAll('.faq-item').forEach(faqItem => {
                 faqItem.classList.remove('active');
             });
-            
+
             // Open clicked item if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
@@ -67,17 +67,17 @@ function initFAQAccordion() {
 // Guide Accordion Toggle
 function initGuideAccordion() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
+
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
             const isActive = item.classList.contains('active');
-            
+
             // Close all accordion items
             document.querySelectorAll('.accordion-item').forEach(accordionItem => {
                 accordionItem.classList.remove('active');
             });
-            
+
             // Open clicked item if it wasn't active
             if (!isActive) {
                 item.classList.add('active');
@@ -92,33 +92,38 @@ function initLightbox() {
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.querySelector('.lightbox-close');
     const screenshotItems = document.querySelectorAll('.screenshot-item');
+    let previousFocus = null;
+    const closeLightbox = () => {
+        if (!lightbox) return;
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        previousFocus?.focus();
+    };
 
     if (screenshotItems.length > 0 && lightbox && lightboxImg) {
         screenshotItems.forEach(item => {
             item.addEventListener('click', () => {
                 const imgSrc = item.getAttribute('data-src');
                 if (imgSrc) {
+                    previousFocus = item;
                     lightboxImg.src = imgSrc;
                     lightboxImg.alt = item.querySelector('img')?.alt || '';
                     lightbox.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    lightboxClose?.focus();
                 }
             });
         });
     }
 
     if (lightboxClose && lightbox) {
-        lightboxClose.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
+        lightboxClose.addEventListener('click', closeLightbox);
     }
 
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                closeLightbox();
             }
         });
     }
@@ -126,8 +131,11 @@ function initLightbox() {
     // Close lightbox with Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            closeLightbox();
+        }
+        if (e.key === 'Tab' && lightbox?.classList.contains('active')) {
+            e.preventDefault();
+            lightboxClose?.focus();
         }
     });
 }
@@ -192,7 +200,7 @@ function initScrollAnimation() {
 function setLanguageSelector() {
     const path = window.location.pathname;
     const languageSelect = document.querySelector('.language-selector select');
-    
+
     if (!languageSelect) return;
 
     // Set default language based on path
@@ -227,3 +235,27 @@ window.ChroniclesMedieval = {
     initSmoothScroll,
     initScrollAnimation
 };
+
+// Existing visitors may still have the old advertising worker or cached pages.
+async function retireLegacyWorker() {
+    if (!('serviceWorker' in navigator)) return;
+    try {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        const legacy = registrations.filter(registration =>
+            [registration.active, registration.waiting, registration.installing].some(worker =>
+                worker && new URL(worker.scriptURL).pathname === '/sw.js'
+            )
+        );
+        if (legacy.length === 0) return;
+        if ('caches' in window) {
+            await Promise.all((await caches.keys()).map(name => caches.delete(name)));
+        }
+        await Promise.all(legacy.map(async registration => {
+            try { await registration.update(); } catch (_) { /* Unregister even if update fails. */ }
+            await registration.unregister();
+        }));
+    } catch (error) {
+        console.warn('Could not retire a legacy site worker:', error);
+    }
+}
+retireLegacyWorker();

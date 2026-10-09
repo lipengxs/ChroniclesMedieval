@@ -8,8 +8,7 @@ Allow: /privacy-policy
 Allow: /terms-of-service
 
 # Allow static resources including favicon
-Allow: /static/favicon.ico
-Allow: /favicon.ico
+Allow: /static/site-icon.svg
 
 # Disallow admin and system directories
 Disallow: /admin/

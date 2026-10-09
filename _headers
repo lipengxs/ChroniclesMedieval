@@ -1,0 +1,19 @@
+/sw.js
+  Cache-Control: no-store, max-age=0
+  Service-Worker-Allowed: /
+  X-Content-Type-Options: nosniff
+
+/static/images/chronicles/*
+  Cache-Control: no-store, max-age=0
+  X-Robots-Tag: noindex
+
+/static/logo.png
+  Cache-Control: no-store, max-age=0
+  X-Robots-Tag: noindex
+
+/static/favicon.ico
+  Cache-Control: no-store, max-age=0
+  X-Robots-Tag: noindex
+
+/static/images/open-art/*
+  X-Content-Type-Options: nosniff

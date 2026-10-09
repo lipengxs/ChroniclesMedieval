@@ -18,3 +18,7 @@ Before publishing a claim, record the original URL, publisher, publication date,
 
 - Steam page capture: the store currently shows “Planned Release Date: 2027” and “This game is not yet available on Steam.” Used by `/release-date`, homepage release copy, the guide hub, news archive, media note, beginner guide, system-requirements page and comparison page.
 - Steam news hub: retained as the dated source entry point for developer posts. Individual battle-system or character claims still require the original post date and excerpt before publication.
+
+## Image replacement — 2026-10-09
+
+All prior raster images and logos have been removed from the publish tree. Replacement historical artwork is supplied as CC0 by The Cleveland Museum of Art. These are editorial illustrations, not game screenshots or official artwork. The public source and license register is `static/images/open-art/credits.json`; the gallery provides individual museum links. Do not republish former assets from Git history or old deployments.
